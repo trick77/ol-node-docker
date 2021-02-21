@@ -1,3 +1,4 @@
-[submodule "overline-src"]
-	path = overline-src
+[submodule "ol-src"]
+	path = ol-src
 	url = https://github.com/trick77/bc-src
+	branch = master
