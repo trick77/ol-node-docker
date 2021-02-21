@@ -15,13 +15,13 @@ RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version ${YARN_VER
     && export PATH=/home/ol/.yarn/bin:${PATH}
 ENV PATH "/home/ol/.yarn/bin:${PATH}"
 
-ARG GIT_REPO=https://github.com/trick77/bc-src
-ARG GIT_BRANCH=master
 
-RUN git clone --single-branch --branch ${GIT_BRANCH} ${GIT_REPO} node
+COPY --chown=ol:0 ./overline-src/ /home/ol/node
 
 WORKDIR /home/ol/node
 RUN mkdir -p ./_data && mkdir -p ./_logs && mkdir -p ./_debug && mkdir -p ./_data_testnet
+#RUN git init
+RUN yarn install --frozen-lockfile
 
 VOLUME /home/ol/node/config
 VOLUME /home/ol/node/_data

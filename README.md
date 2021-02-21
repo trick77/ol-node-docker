@@ -1,5 +1,12 @@
-# ol-docker
+# overline-node-dev
 
-Overline node for relaying or JS mining which doesn't run as root.
+Rootless/unprivileged node for relaying blocks/transactions and/or mining on Overline blockchain.
+Adds source as git module for easy code modification/experiments.
 
-tbd
+## Build
+
+Running ```docker-compose build``` will use the sources in ./overline-src to build a new Docker image containing the Overline node.
+
+## Run
+
+Running ```docker-compose up -d``` will start the Overline node in the background.
