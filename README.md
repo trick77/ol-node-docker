@@ -1,7 +1,7 @@
 # overline-node-dev
 
 Rootless/unprivileged node for relaying blocks/transactions and/or mining on Overline blockchain.
-Adds source as git module for easy code modification/experiments.
+Adds Overline node source as git module for easy code modification.
 
 ## Build
 
