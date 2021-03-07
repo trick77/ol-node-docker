@@ -10,6 +10,9 @@ services:
     environment:
       - BC_NETWORK=main
       - BC_TUNNEL_HTTPS=false
+      - BC_MINER_WORKERS=1
+      - BC_RUST_MINER=false
+      - BC_GRPC_RUST_MINER_PORT=50052
       - NODE_OPTIONS=--max_old_space_size=8192
     mem_limit: 9999m
     mem_reservation: 8900m

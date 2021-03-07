@@ -1,0 +1,17 @@
+Index: lib/mining/officer.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/mining/officer.js b/lib/mining/officer.js
+--- a/lib/mining/officer.js	(revision 88ad861c6ba7090118052020d1e0b7ce9d93a43e)
++++ b/lib/mining/officer.js	(date 1615126951323)
+@@ -824,7 +824,7 @@
+     //  }
+     //}
+ 
+-    if (false || BC_RUST_MINER) {
++    if (BC_RUST_MINER) {
+ 
+       const maxMutant = setTimeout(async () => {
+         this._logger.warn(`timeout triggered for ${workId}`);
