@@ -6,7 +6,8 @@ Adds Overline node source as git module for easy code modification.
 ## Build
 
 1. ```git submodule update --init --recursive```
-2. ```docker-compose build``` will use the sources in ./ol-src to build a new Docker image containing the Overline node
+2. Optionally, put *.patch files into ```./patches``` directory 
+3. ```docker-compose build``` will use the sources in ./ol-src to build a new Docker image containing the Overline node
 
 To update the Overline node source to the latest tip of the remote branch: ```git submodule update --recursive --remote```
 

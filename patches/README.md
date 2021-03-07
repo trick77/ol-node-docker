@@ -1,1 +1,1 @@
-# *.path files found here will be applied
+# *.patch files found here will be applied
