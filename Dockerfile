@@ -16,8 +16,10 @@ RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version ${YARN_VER
 ENV PATH "/home/ol/.yarn/bin:${PATH}"
 
 COPY --chown=ol:0 ./ol-src/ /home/ol/node
+COPY --chown=ol:0 ./patches /tmp/patches
 
 WORKDIR /home/ol/node
+RUN cd ./lib && for i in /tmp/patches/*.patch; do patch -p1 < $i; done
 RUN mkdir -p ./_data && mkdir -p ./_logs && mkdir -p ./_debug && mkdir -p ./_data_testnet
 RUN yarn install --frozen-lockfile
 
